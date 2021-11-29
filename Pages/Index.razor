@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, Rockers!!!</h1>
+
+<p>Welcome to my Coding Challenge - build a "like" button feature.</p>
+
+<br />
+<br />
+
+@model BlazorApp.ViewModels.IndexViewModel
+    @{
+        ViewBag.Title = "Home Page";
+    }
+
+    <button data-id="@Model.Post.Id" type="button" class="like-button" title="Click here to like this post!">
+        <i class="far fa-thumbs-up"></i> Like
+        |
+        <span class="like-count">@Model.PostLikes</span>
+    </button>
+
+
